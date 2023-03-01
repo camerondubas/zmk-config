@@ -8,6 +8,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Escape {
+            bindings = <&kp ESC>;
+            key-positions = <3 2>;
+        };
+    };
+
+    macros {
+        Hover: Hover {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K) &kp LC(I)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,10 +67,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans
+&trans         &trans       &kp F2  &trans  &trans  &trans  &trans         &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN            &kp END  &trans
+&trans  &kp LC(LS(R))  &kp LA(F12)  &kp LA  &trans  &trans  &trans         &kp LEFT               &kp UP         &kp DOWN          &kp RIGHT  &trans
+&trans         &trans       &trans  &trans  &trans  &trans  &trans  &kp LC(PAGE_UP)  &kp LS(LA(LC(TAB)))  &kp LA(LC(TAB))  &kp LC(PAGE_DOWN)  &trans
+                                    &trans  &trans  &trans  &trans           &trans               &trans
             >;
         };
     };
