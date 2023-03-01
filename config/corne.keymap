@@ -7,6 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define DEFAULT    0
+#define SYMBOLS    1
+#define NAVIGATION 2
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -18,18 +22,18 @@
 &none  &kp Q  &kp W     &kp F                 &kp P                 &kp G                 &kp J                 &kp L           &kp U           &kp Y           &kp SEMI        &none
 &none  &kp A  &kp R     &kp S                 &kp T                 &kp D                 &kp H                 &kp N           &kp E           &kp I           &kp O           &none
 &none  &kp Z  &kp X     &kp C                 &kp V                 &kp B                 &kp K                 &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                        &kp LGUI              &mt LEFT_CONTROL TAB  &kp BACKSPACE       &mt LEFT_SHIFT SPACE  &kp RET         &none
+                        &kp LGUI              &mt LEFT_CONTROL TAB  &lt 1 BACKSPACE       &mt LEFT_SHIFT SPACE  &kp RET         &none
             >;
         };
 
-//         lower_layer {
-//             bindings = <
-// &trans          &kp CAPS        &kp LEFT_BRACE      &kp LEFT_PARENTHESIS    &kp LEFT_BRACKET        &trans        &trans            &kp RIGHT_BRACKET      &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACE         &trans          &trans
-// &trans          &kp NUMBER_1    &kp NUMBER_2        &kp NUMBER_3            &kp NUMBER_4            &kp NUMBER_5  &kp NUMBER_6      &kp NUMBER_7           &kp NUMBER_8            &kp NUMBER_9            &kp NUMBER_0    &trans
-// &trans          &trans          &trans              &trans                  &trans                  &trans        &trans            &trans                 &trans                  &trans                  &trans          &trans
-//                                                     &trans                  &trans                  &trans        &trans            &trans                 &trans
-//             >;
-//         };
+        lower_layer {
+            bindings = <
+&trans          &kp CAPS        &kp LEFT_BRACE      &kp LEFT_PARENTHESIS    &kp LEFT_BRACKET        &trans        &trans            &kp RIGHT_BRACKET      &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACE         &trans          &trans
+&trans          &kp NUMBER_1    &kp NUMBER_2        &kp NUMBER_3            &kp NUMBER_4            &kp NUMBER_5  &kp NUMBER_6      &kp NUMBER_7           &kp NUMBER_8            &kp NUMBER_9            &kp NUMBER_0    &trans
+&trans          &trans          &trans              &trans                  &trans                  &trans        &trans            &trans                 &trans                  &trans                  &trans          &trans
+                                                    &trans                  &trans                  &trans        &trans            &trans                 &trans
+            >;
+        };
 
 //         raise_layer {
 //             bindings = <
