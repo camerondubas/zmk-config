@@ -8,58 +8,33 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-    };
-
-    macros {
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
-&none  &kp Q  &kp W     &kp F                 &kp P            &kp G                 &kp J    &kp L      &kp U    &kp Y  &kp SEMI  &none
-&none  &kp A  &kp R     &kp S               &lt 2 T            &kp D                 &kp H    &kp N      &kp E    &kp I     &kp O  &none
-&none  &kp Z  &kp X     &kp C                 &kp V            &kp B                 &kp K    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp LGUI  &mt LEFT_CONTROL TAB  &lt 1 BACKSPACE  &mt LEFT_SHIFT SPACE  &kp RET      &none
+&none  &kp Q  &kp W     &kp F                 &kp P                 &kp G                 &kp J                 &kp L           &kp U           &kp Y           &kp SEMI        &none
+&none  &kp A  &kp R     &kp S                 &lt 2 T               &kp D                 &kp H                 &kp N           &kp E           &kp I           &kp O           &none
+&none  &kp Z  &kp X     &kp C                 &kp V                 &kp B                 &kp K                 &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
+                        &kp LGUI              &mt LEFT_CONTROL TAB  &lt 1 BACKSPACE       &mt LEFT_SHIFT SPACE  &kp RET         &none
             >;
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&trans      &kp CAPS  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET        &trans        &trans  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE        &trans  &trans
-&trans  &kp NUMBER_1    &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6       &kp NUMBER_7           &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans        &trans          &trans                &trans            &trans        &trans        &trans             &trans                 &trans           &trans        &trans  &trans
-                                                    &trans            &trans        &trans        &trans             &trans                 &trans
+&trans          &kp CAPS        &kp LEFT_BRACE      &kp LEFT_PARENTHESIS    &kp LEFT_BRACKET        &trans        &trans            &kp RIGHT_BRACKET      &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACE         &trans          &trans
+&trans          &kp NUMBER_1    &kp NUMBER_2        &kp NUMBER_3            &kp NUMBER_4            &kp NUMBER_5  &kp NUMBER_6      &kp NUMBER_7           &kp NUMBER_8            &kp NUMBER_9            &kp NUMBER_0    &trans
+&trans          &trans          &trans              &trans                  &trans                  &trans        &trans            &trans                 &trans                  &trans                  &trans          &trans
+                                                    &trans                  &trans                  &trans        &trans            &trans                 &trans
             >;
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&trans         &trans       &kp F2  &trans  &trans  &trans  &trans         &kp HOME          &kp PAGE_UP    &kp PAGE_DOWN            &kp END  &trans
-&trans  &kp LC(LS(R))  &kp LA(F12)  &kp LA  &trans  &trans  &trans         &kp LEFT_ARROW               &kp UP_ARROW        &kp DOWN_ARROW         &kp RIGHT_ARROW  &trans
-&trans         &trans       &trans  &trans  &trans  &trans  &trans  &kp LC(PAGE_UP)  &kp LS(LA(LC(TAB)))  &kp LA(LC(TAB))  &kp LC(PAGE_DOWN)  &trans
-                                    &trans  &trans  &trans  &trans           &trans               &trans
+&trans          &trans          &kp F2          &trans          &trans          &trans          &trans          &kp HOME                &kp PAGE_UP             &kp PAGE_DOWN           &kp END                 &trans
+&trans          &kp LC(LS(R))   &kp LA(F12)     &kp LA          &trans          &trans          &trans          &kp LEFT_ARROW          &kp UP_ARROW            &kp DOWN_ARROW          &kp RIGHT_ARROW         &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LC(PAGE_UP)         &kp LS(LA(LC(TAB)))     &kp LA(LC(TAB))         &kp LC(PAGE_DOWN)       &trans
+                                                &trans          &trans          &trans          &trans          &trans                  &trans
             >;
         };
     };
