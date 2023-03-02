@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 // Layers
 #define DEFAULT    0
@@ -73,8 +74,8 @@
 
         raise_layer {
             bindings = <
-&trans          &trans          &kp F2          &trans          &trans          &trans          &trans          &kp HOME                &kp PAGE_UP             &kp PAGE_DOWN           &kp END                 &trans
-&trans          &kp LC(LS(R))   &kp LA(F12)     &kp LALT        &trans          &trans          &trans          &kp LEFT                &kp UP                  &kp DOWN                &kp RIGHT               &trans
+&trans          &trans          &kp F2          &bt BT_PRV      &bt BT_NXT      &trans          &trans          &kp HOME                &kp PAGE_UP             &kp PAGE_DOWN           &kp END                 &trans
+&trans          &kp LC(LS(R))   &kp LA(F12)     &kp LALT        &bt BT_CLR      &trans          &trans          &kp LEFT                &kp UP                  &kp DOWN                &kp RIGHT               &trans
 &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LC(PAGE_UP)         &kp LS(LA(LC(TAB)))     &kp LA(LC(TAB))         &kp LC(PAGE_DOWN)       &trans
                                                 &trans          &trans          &trans          &trans          &trans                  &trans
             >;
