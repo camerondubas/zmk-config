@@ -7,9 +7,14 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+// Layers
 #define DEFAULT    0
 #define SYMBOLS    1
-#define NAVIGATION 2
+#define NAV 2
+
+// Constants
+#define TAP_TERM_MS 165
+#define COMBO_TIMEOUT_MS 75
 
 / {
 
@@ -18,8 +23,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
+            tapping-term-ms = <TAP_TERM_MS>;
+            bindings = <&lt SYMBOLS BACKSPACE>, <&kp BACKSPACE>;
         };
     };
 
@@ -29,7 +34,7 @@
         Escape {
             bindings = <&kp ESC>;
             key-positions = <3 2>;
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
         };
     };
 
@@ -47,19 +52,19 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp W     &kp F                 &kp P                 &kp G      &kp J                 &kp L           &kp U           &kp Y           &kp SEMI        &none
-&none  &kp A  &kp R     &kp S                 &lt 2 T               &kp D      &kp H                 &kp N           &kp E           &kp I           &kp O           &none
-&none  &kp Z  &kp X     &kp C                 &kp V                 &kp B      &kp K                 &kp M           &kp COMMA       &kp DOT         &kp FSLH        &none
-                        &kp LGUI              &mt LEFT_CONTROL TAB  &td0       &mt LEFT_SHIFT SPACE  &kp RET         &none
+&none  &kp Q  &kp W     &kp F        &kp P     &kp G               &kp J              &kp L              &kp U              &kp Y           &kp SEMI        &none
+&none  &kp A  &kp R     &kp S        &lt NAV T &kp D               &kp H              &kp N              &kp E              &kp I           &kp O           &none
+&none  &kp Z  &kp X     &kp C        &kp V     &kp B               &kp K              &kp M              &kp COMMA          &kp DOT         &kp FSLH        &none
+                        &kp LGUI     &td0      &ht_hp LCTRL TAB    &mt RET LS(RET)    &mt LSHFT SPACE    &mt LC(LS(P)) LC(P)
             >;
         };
 
         lower_layer {
             bindings = <
-&trans          &kp CAPS        &kp LEFT_BRACE      &kp LEFT_PARENTHESIS    &kp LEFT_BRACKET        &trans        &trans            &kp RIGHT_BRACKET      &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACE         &trans          &trans
-&trans          &kp NUMBER_1    &kp NUMBER_2        &kp NUMBER_3            &kp NUMBER_4            &kp NUMBER_5  &kp NUMBER_6      &kp NUMBER_7           &kp NUMBER_8            &kp NUMBER_9            &kp NUMBER_0    &trans
-&trans          &trans          &trans              &trans                  &trans                  &trans        &trans            &trans                 &trans                  &trans                  &trans          &trans
-                                                    &trans                  &trans                  &trans        &trans            &trans                 &trans
+&trans          &kp CAPS  &kp LBRC      &kp LPAR    &kp LBKT   &trans   &trans      &kp RBKT      &kp RPAR   &kp RBRC    &trans    &trans
+&trans          &kp N1    &kp N2        &kp N3      &kp N4     &kp N5   &kp N6      &kp N7        &kp N8     &kp N9      &kp N0    &trans
+&trans          &trans    &trans        &trans      &trans     &trans   &trans      &trans        &trans     &trans      &trans    &trans
+                                                    &trans     &trans   &trans      &trans        &trans     &trans
             >;
         };
 
