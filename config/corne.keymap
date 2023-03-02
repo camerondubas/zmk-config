@@ -20,6 +20,10 @@
 // Key Names
 #define CMD_PALETTE LC(P) LC(LS(P))
 
+&mt {
+    tapping-term-ms = <TAP_TERM_MS>;
+};
+
 / {
 
     behaviors {
@@ -56,9 +60,9 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp W     &kp F        &kp P     &kp G               &kp J              &kp L              &kp U              &kp Y           &kp SEMI        &none
-&none  &kp A  &kp R     &kp S        &lt NAV T &kp D               &kp H              &kp N              &kp E              &kp I           &kp O           &none
-&none  &kp Z  &kp X     &kp C        &kp V     &kp B               &kp K              &kp M              &kp COMMA          &kp DOT         &kp FSLH        &none
+&none  &kp Q  &kp W     &kp F        &kp P     &kp G               &kp J              &mt BSLH L         &mt SQT U          &mt DQT Y       &mt COLON SEMI        &none
+&none  &kp A  &kp R     &kp S        &lt NAV T &kp D               &mt TILDE H        &mt PLUS N         &mt MINUS E        &mt UNDER I     &mt PIPE O           &none
+&none  &kp Z  &kp X     &kp C        &kp V     &kp B               &mt GRAVE K        &mt EQUAL M        &mt LT COMMA       &mt GT DOT      &mt QMARK FSLH        &none
                         &kp LGUI     &td0      &mt LCTRL TAB       &mt LS(RET) RET    &mt LSHFT SPACE    &mt CMD_PALETTE
             >;
         };
