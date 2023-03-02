@@ -55,7 +55,7 @@
 &none  &kp Q  &kp W     &kp F        &kp P     &kp G               &kp J              &kp L              &kp U              &kp Y           &kp SEMI        &none
 &none  &kp A  &kp R     &kp S        &lt NAV T &kp D               &kp H              &kp N              &kp E              &kp I           &kp O           &none
 &none  &kp Z  &kp X     &kp C        &kp V     &kp B               &kp K              &kp M              &kp COMMA          &kp DOT         &kp FSLH        &none
-                        &kp LGUI     &td0      &ht_hp LCTRL TAB    &mt RET LS(RET)    &mt LSHFT SPACE    &mt LC(LS(P)) LC(P)
+                        &kp LGUI     &td0      &mt LCTRL TAB       &mt RET LS(RET)    &mt LSHFT SPACE    &mt LC(LS(P)) LC(P)
             >;
         };
 
