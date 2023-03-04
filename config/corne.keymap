@@ -37,7 +37,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_TERM_MS>;
-            bindings = <&lt SYMBOLS BACKSPACE>, <&kp BACKSPACE>;
+            bindings = <&mt SYMBOLS BACKSPACE>, <&kp BACKSPACE>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -74,11 +74,11 @@
         default_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-    &none           &kp Q           &kp W           &kp F           &kp P           &kp G              &kp J           &mt BSLH L      &mt SQT U       &mt DQT Y       &mt COLON SEMI  &none
+    &none           &kp Q           &kp W           &kp F           &kp P           &kp G              &kp J           &lt BSLH L      &lt SQT U       &lt DQT Y       &lt COLON SEMI  &none
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &none           &kp A           &kp R           &kp S           &lt NAV T       &kp D              &mt TILDE H     &mt PLUS N      &mt MINUS E     &mt UNDER I     &mt PIPE O      &none
+    &none           &kp A           &kp R           &kp S           &lt NAV T       &kp D              &lt TILDE H     &lt PLUS N      &lt MINUS E     &lt UNDER I     &lt PIPE O      &none
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &none           &kp Z           &kp X           &kp C           &kp V           &kp B              &mt GRAVE K     &mt EQUAL M     &mt LT COMMA    &mt GT DOT      &mt QMARK FSLH  &none
+    &none           &kp Z           &kp X           &kp C           &kp V           &kp B              &lt GRAVE K     &lt EQUAL M     &lt LT COMMA    &lt GT DOT      &lt QMARK FSLH  &none
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
                                                     &kp LGUI        &td0            &mt LCTRL TAB      &mt LS(RET) RET &td1            &mt CMD_PALETTE
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
