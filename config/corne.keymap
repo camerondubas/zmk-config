@@ -45,7 +45,7 @@
             label = "HOLD_SYMBOL";
             #binding-cells = <2>;
             tapping_term_ms = <TAP_TERM_MS>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <TAP_TERM_MS>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
