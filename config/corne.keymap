@@ -37,7 +37,6 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_TERM_MS>;
-            flavor = "hold-preferred";
             bindings = <&lt_hp SYMBOLS BACKSPACE>, <&kp BACKSPACE>;
         };
         spc_shft: tap_dance_1 {
