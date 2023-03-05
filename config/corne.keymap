@@ -37,7 +37,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <TAP_TERM_MS>;
-            bindings = <&mt SYMBOLS BACKSPACE>, <&kp BACKSPACE>;
+            bindings = <&lt SYMBOLS BACKSPACE>, <&kp BACKSPACE>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -45,6 +45,15 @@
             #binding-cells = <0>;
             tapping-term-ms = <TAP_TERM_MS>;
             bindings = <&mt LSHFT SPACE>, <&kp SPACE>;
+        };
+        hs: hold_symbol {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_SYMBOL";
+            #binding-cells = <2>;
+            tapping_term_ms = <TAP_TERM_MS>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -67,25 +76,24 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-    &none           &kp Q           &kp W           &kp F           &kp P           &kp G              &kp J           &lt BSLH L      &lt SQT U       &lt DQT Y       &lt COLON SEMI  &none
+    &none           &kp Q           &kp W           &kp F           &kp P           &kp G              &kp J           &hs BSLH L      &hs SQT U       &hs DQT Y       &hs COLON SEMI  &none
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &none           &kp A           &kp R           &kp S           &lt NAV T       &kp D              &lt TILDE H     &lt PLUS N      &lt MINUS E     &lt UNDER I     &lt PIPE O      &none
+    &none           &kp A           &kp R           &kp S           &lt NAV T       &kp D              &hs TILDE H     &hs PLUS N      &hs MINUS E     &hs UNDER I     &hs PIPE O      &none
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &none           &kp Z           &kp X           &kp C           &kp V           &kp B              &lt GRAVE K     &lt EQUAL M     &lt LT COMMA    &lt GT DOT      &lt QMARK FSLH  &none
+    &none           &kp Z           &kp X           &kp C           &kp V           &kp B              &hs GRAVE K     &hs EQUAL M     &hs LT COMMA    &hs GT DOT      &hs QMARK FSLH  &none
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
                                                     &kp LGUI        &td0            &mt LCTRL TAB      &mt LS(RET) RET &td1            &mt CMD_PALETTE
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
             >;
         };
 
-        lower_layer {
+        symbols_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
     &trans          &kp CAPS        &kp LBRC        &kp LPAR        &kp LBKT        &trans             &trans          &kp RBKT        &kp RPAR        &kp RBRC        &trans          &trans
@@ -99,14 +107,14 @@
             >;
         };
 
-        raise_layer {
+        navigation_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-    &trans          &trans          &kp F2          &bt BT_PRV      &bt BT_NXT      &trans             &trans          &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN   &kp END         &trans
+    &trans          &trans          &kp F2          &bt BT_PRV      &trans          &bt BT_NXT         &trans          &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN   &kp END         &trans
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &trans          &kp LC(LS(R))   &kp LA(F12)     &kp LALT        &bt BT_CLR      &trans             &trans          &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT       &trans
+    &trans          &kp LC(LS(R))   &kp LA(F12)     &kp LALT        &trans          &bt BT_CLR         &trans          &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT       &trans
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &trans          &trans          &trans          &trans          &ext_power EP_TOG  &trans          &trans          &kp PREV_TAB    &kp PREV_WIN    &kp NEXT_WIN    &kp NEXT_TAB &trans
+    &trans          &trans          &trans          &trans          &trans          &ext_power EP_TOG  &trans          &kp PREV_TAB    &kp PREV_WIN    &kp NEXT_WIN    &kp NEXT_TAB &trans
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
                                                     &trans          &trans          &trans             &trans          &trans          &trans
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
