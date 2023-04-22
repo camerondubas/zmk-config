@@ -51,7 +51,7 @@
         };
         lt_hp: hold_preferred_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_PREFERRED";
+            label = "HOLD_PREFERRED_LAYER";
             #binding-cells = <2>;
             tapping_term_ms = <TAP_TERM_MS>;
             quick_tap_ms = <TAP_TERM_MS>;
