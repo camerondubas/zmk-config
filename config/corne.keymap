@@ -36,15 +36,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        lt_hp: hold_preferred_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_PREFERRED_LAYER";
-            #binding-cells = <2>;
-            tapping_term_ms = <TAP_TERM_MS>;
-            quick_tap_ms = <TAP_TERM_MS>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-        };
         ht_hp: hold_preferred {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_PREFERRED";
@@ -68,7 +59,7 @@
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
     &kp LGUI        &kp Z           &kp X           &kp C           &kp D           &kp V              &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH       &kp EQUAL
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
-                                                    &lt SYM BSPC    &kt LCTRL       &lt_hp SYM BSPC    &ht_hp LSHFT SPACE &mt LS(RET) RET &ht_hp LSHFT SPACE
+                                                    &lt SYM BSPC    &kt LCTRL       &trans             &ht_hp LSHFT SPACE &mt LS(RET) RET &ht_hp LSHFT SPACE
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
             >;
         };
