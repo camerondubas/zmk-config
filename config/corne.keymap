@@ -16,30 +16,17 @@
 
 // Constants
 #define TAP_TERM_MS 175
-#define COMBO_TIMEOUT_MS 75
 
 // Key Names
-#define CMD_PALETTE LC(P) LC(LS(P))
 #define PREV_WIN LS(LA(LC(TAB)))
 #define NEXT_WIN LA(LC(TAB))
-#define PREV_TAB LC(PAGE_UP)
-#define NEXT_TAB LC(PAGE_DOWN)
-#define REFACTOR LC(LS(R))
 
 &mt {
     tapping-term-ms = <TAP_TERM_MS>;
 };
 
 / {
-
     behaviors {
-        spc_shft: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAP_TERM_MS>;
-            bindings = <&mt LSHFT SPACE>, <&kp SPACE>;
-        };
         tp: hold_symbol {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_SYMBOL";
@@ -66,25 +53,6 @@
             quick_tap_ms = <TAP_TERM_MS>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        Escape {
-            bindings = <&kp ESC>;
-            key-positions = <3 2>;
-            timeout-ms = <COMBO_TIMEOUT_MS>;
-        };
-    };
-
-    macros {
-        hover: Hover {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(K) &kp LC(I)>;
         };
     };
 
