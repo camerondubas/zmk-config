@@ -11,8 +11,8 @@
 
 // Layers
 #define DEFAULT    0
-#define SYM    1
-#define NAV 2
+#define SYM        1
+#define NAV        2
 
 // Constants
 #define TAP_TERM_MS 175
@@ -94,13 +94,13 @@
         default_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-    &none           &kp Q           &kp W           &kp F           &kp P           &kp G              &kp J           &tp BSLH L      &tp SQT U       &tp DQT Y       &tp COLON SEMI  &none
+    &kp GRAVE       &kp Q           &kp W           &kp F           &kp P           &kp B              &kp J           &kp L           &kp U           &kp Y           &kp SEMI        &kp 
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &none           &kp A           &kp R           &kp S           &lt NAV T       &kp D              &tp TILDE H     &tp PLUS N      &tp MINUS E     &tp UNDER I     &tp PIPE O      &none
+    &tp LALT ESC    &kp A           &kp R           &kp S           &lt NAV T       &kp G              &kp M           &kp N           &kp E           &kp I           &kp O           &kp SQT
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &none           &kp Z           &kp X           &kp C           &kp V           &kp B              &tp GRAVE K     &tp EQUAL M     &tp LT COMMA    &tp GT DOT      &tp QMARK FSLH  &none
+    &kp LGUI        &kp Z           &kp X           &kp C           &kp D           &kp V              &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH       &kp EQUAL
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
-                                                    &kp LGUI        &mt LCTRL TAB   &lt_hp SYM BSPC    &ht_hp LSHFT SPACE       &mt LS(RET) RET &mt CMD_PALETTE
+                                                    &lt SYM BSPC    &kt LCTRL       &lt_hp SYM BSPC    &ht_hp LSHFT SPACE &mt LS(RET) RET &ht_hp LSHFT SPACE
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
             >;
         };
@@ -108,11 +108,11 @@
         symbols_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-    &trans          &kp CAPS        &kp LBRC        &kp LPAR        &kp LBKT        &trans             &trans          &kp RBKT        &kp RPAR        &kp RBRC        &trans          &trans
+    &kp TILDE       &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &kp PERCENT        &kp CARET       &kp AMPS        &kp ASTERISK    &kp PIPE2       &kp COLON       &kp UNDER
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &trans          &kp N1          &kp N2          &kp N3          &kp N4          &kp N5             &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &trans
+    &trans          &kp N1          &kp N2          &kp N3          &kp N4          &kp N5             &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp QUOTE
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &trans          &trans          &trans          &trans          &trans          &trans             &trans          &trans          &trans          &trans          &trans          &trans
+    &trans          &kp BSLH        &kp LBKT        &kp LBRC        &kp LPAR        &kp LT             &kp GT          &kp RPAR        &kp LBRC        &kp RBKT        &kp QMARK       &kp PLUS
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
                                                     &trans          &trans          &trans             &trans          &trans          &trans
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
@@ -122,11 +122,11 @@
         navigation_layer {
             bindings = <
 // ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐  ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-    &trans          &trans          &kp F2          &hover          &trans          &trans             &trans          &kp HOME        &kp PG_UP       &kp PG_DN       &kp END         &trans
+    &trans          &trans          &trans          &trans          &trans          &trans             &kp LGUI(N1)    &kp LGUI(N2)    &kp LGUI(N3)    &kp LGUI(N4)    &kp LGUI(N5)    &kp LGUI(N6)
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &trans          &kp REFACTOR    &kp LA(F12)     &kp LALT        &trans          &kp K_POWER        &trans          &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT       &trans
+    &trans          &trans          &trans          &trans          &trans          &trans             &kp LGUI(N7)    &kp LEFT        &kp UP          &kp DOWN        &kp RIGHT       &trans
 // ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-    &trans          &trans          &trans          &trans          &trans          &kp K_SLEEP        &trans          &kp PREV_TAB    &kp PREV_WIN    &kp NEXT_WIN    &kp NEXT_TAB    &trans
+    &trans          &trans          &trans          &trans          &trans          &trans             &trans          &kp PAGE_UP     &kp PREV_WIN    &kp NEXT_WIN    &kp PAGE_DOWN   &trans
 // └───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤  ├───────────────┼───────────────┼───────────────┼───────────────┴───────────────┴───────────────┘
                                                     &trans          &trans          &trans             &trans          &trans          &trans
 //                                                 └───────────────┴───────────────┴───────────────┘  └───────────────┴───────────────┴───────────────┘
