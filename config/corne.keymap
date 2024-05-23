@@ -66,6 +66,15 @@
                                                &trans         &trans        &trans         &trans         &trans        &trans
             >;
         };
+
+        nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(N3)   &kp LG(N4)  &kp LG(N5)  &kp LG(N6)
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N7)        &kp LEFT          &kp UP       &kp DOWN    &kp RIGHT   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp PG_UP         &kp LS(TAB)  &kp TAB     &kp PG_DN   &trans
+                        &trans  &trans  &trans  &trans            &trans            &trans
+            >;
+        };
     };
 };
 
