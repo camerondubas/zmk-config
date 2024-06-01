@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 // Layers
 
@@ -29,10 +28,10 @@
 
         default_layer {
             bindings = <
-&kp GRAVE        &kp Q  &kp W  &kp F            &kp P      &kp B   &kp J   &kp L            &kp U      &kp Y    &kp SEMI   &kp MINUS
-&mt LALT ESCAPE  &kp A  &kp R  &kp S            &lt 2 T    &kp G   &kp M   &kp N            &kp E      &kp I    &kp O      &kp SQT
-&kp LGUI         &kp Z  &kp X  &kp C            &kp D      &kp V   &kp K   &kp H            &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
-                               &lt 1 BACKSPACE  &kt LCTRL  &trans  &trans  &mt LS(RET) RET  &none
+&kp GRAVE        &kp Q  &kp W  &kp F  &kp P      &kp B            &kp J                 &kp L            &kp U      &kp Y    &kp SEMI   &kp MINUS
+&mt LALT ESCAPE  &kp A  &kp R  &kp S  &lt 2 T    &kp G            &kp M                 &kp N            &kp E      &kp I    &kp O      &kp SQT
+&kp LGUI         &kp Z  &kp X  &kp C  &kp D      &kp V            &kp K                 &kp H            &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
+                               &none  &kp LCTRL  &lt 1 BACKSPACE  &mt LEFT_SHIFT SPACE  &mt LS(RET) RET  &none
             >;
         };
 
