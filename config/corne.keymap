@@ -23,15 +23,24 @@
 &mt { tapping-term-ms = <TAP_TERM_MS>; };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp GRAVE        &kp Q  &kp W  &kp F  &kp P      &kp B            &kp J                 &kp L            &kp U      &kp Y    &kp SEMI   &kp MINUS
-&mt LALT ESCAPE  &kp A  &kp R  &kp S  &lt 2 T    &kp G            &kp M                 &kp N            &kp E      &kp I    &kp O      &kp SQT
-&kp LGUI         &kp Z  &kp X  &kp C  &kp D      &kp V            &kp K                 &kp H            &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
-                               &none  &kp LCTRL  &lt 1 BACKSPACE  &mt LEFT_SHIFT SPACE  &mt LS(RET) RET  &none
+&kp GRAVE  &kp Q  &kp W  &kp F  &kp P            &kp B      &kp J            &kp L                 &kp U      &kp Y    &kp SEMI   &kp MINUS
+&kp P      &kp A  &kp R  &kp S  &lt 2 T          &kp G      &kp M            &kp N                 &kp E      &kp I    &kp O      &kp SQT
+&kp LGUI   &kp Z  &kp X  &kp C  &kp D            &kp V      &kp K            &kp H                 &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
+                         &none  &lt 1 BACKSPACE  &kp LCTRL  &mt LS(RET) RET  &mt LEFT_SHIFT SPACE  &none
             >;
         };
 
