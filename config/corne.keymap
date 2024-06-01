@@ -37,10 +37,10 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp F  &kp P            &kp B      &kp J            &kp L                 &kp U      &kp Y    &kp SEMI   &kp MINUS
-&kp P      &kp A  &kp R  &kp S  &lt 2 T          &kp G      &kp M            &kp N                 &kp E      &kp I    &kp O      &kp SQT
-&kp LGUI   &kp Z  &kp X  &kp C  &kp D            &kp V      &kp K            &kp H                 &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
-                         &none  &lt 1 BACKSPACE  &kp LCTRL  &mt LS(RET) RET  &mt LEFT_SHIFT SPACE  &none
+&kp GRAVE   &kp Q  &kp W  &kp F         &kp P            &kp B      &kp J            &kp L                 &kp U      &kp Y    &kp SEMI   &kp MINUS
+&kp ESCAPE  &kp A  &kp R  &kp S         &lt 2 T          &kp G      &kp M            &lt 3 N               &kp E      &kp I    &kp O      &kp SQT
+&kp LGUI    &kp Z  &kp X  &kp C         &kp D            &kp V      &kp K            &kp H                 &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
+                          &kp LEFT_ALT  &lt 1 BACKSPACE  &kp LCTRL  &mt LS(RET) RET  &mt LEFT_SHIFT SPACE  &none
             >;
         };
 
@@ -59,6 +59,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N7)        &kp LEFT          &kp UP       &kp DOWN    &kp RIGHT   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp PG_UP         &kp LS(TAB)  &kp TAB     &kp PG_DN   &trans
                         &trans  &trans  &trans  &trans            &trans            &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans            &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans            &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans      &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
