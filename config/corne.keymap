@@ -33,11 +33,18 @@
     };
 
     behaviors {
-        tap_hold_repeat: tap_hold_repeat {
+        bck_sym_hld: bck_sym_hld {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_HOLD_REPEAT";
+            label = "BCK_SYM_HLD";
             #binding-cells = <0>;
             bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
+        };
+
+        spc_shft_hld: spc_shft_hld {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPC_SHFT_HLD";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT SPACE>, <&kp SPACE>;
         };
     };
 
@@ -46,10 +53,10 @@
 
         default_layer {
             bindings = <
-&kp GRAVE   &kp Q  &kp W  &kp F         &kp P             &kp B      &kp J            &kp L                 &kp U      &kp Y    &kp SEMI   &kp MINUS
-&kp ESCAPE  &kp A  &kp R  &kp S         &lt 2 T           &kp G      &kp M            &lt 3 N               &kp E      &kp I    &kp O      &kp SQT
-&kp LGUI    &kp Z  &kp X  &kp C         &kp D             &kp V      &kp K            &kp H                 &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
-                          &kp LEFT_ALT  &tap_hold_repeat  &kp LCTRL  &mt LS(RET) RET  &mt LEFT_SHIFT SPACE  &none
+&kp GRAVE   &kp Q  &kp W  &kp F         &kp P         &kp B      &kp J            &kp L          &kp U      &kp Y    &kp SEMI   &kp MINUS
+&kp ESCAPE  &kp A  &kp R  &kp S         &lt 2 T       &kp G      &kp M            &lt 3 N        &kp E      &kp I    &kp O      &kp SQT
+&kp LGUI    &kp Z  &kp X  &kp C         &kp D         &kp V      &kp K            &kp H          &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
+                          &kp LEFT_ALT  &bck_sym_hld  &kp LCTRL  &mt LS(RET) RET  &spc_shft_hld  &none
             >;
         };
 
