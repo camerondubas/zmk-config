@@ -20,7 +20,7 @@
 #define PREV_WIN LS(LA(LC(TAB)))
 #define NEXT_WIN LA(LC(TAB))
 
-&mt { tapping-term-ms = <TAP_TERM_MS>; };
+&mt { tapping-term-ms = <164>; };
 
 / {
     combos {
@@ -38,6 +38,8 @@
             label = "BCK_SYM_HLD";
             #binding-cells = <0>;
             bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <164>;
         };
 
         spc_shft_hld: spc_shft_hld {
@@ -45,6 +47,8 @@
             label = "SPC_SHFT_HLD";
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT SPACE>, <&kp SPACE>;
+
+            tapping-term-ms = <164>;
         };
     };
 
