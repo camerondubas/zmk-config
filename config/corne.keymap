@@ -79,6 +79,7 @@
             #binding-cells = <2>;
             require-prior-idle-ms = <100>;
             tapping-term-ms = <164>;
+            flavor = "tap-preferred";
         };
     };
 
