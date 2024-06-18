@@ -59,6 +59,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <164>;
             quick-tap-ms = <164>;
+            require-prior-idle-ms = <100>;
+            flavor = "tap-preferred";
         };
 
         lt_qt: lt_qt {
@@ -69,6 +71,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <164>;
             quick-tap-ms = <164>;
+            require-prior-idle-ms = <100>;
+            flavor = "tap-preferred";
         };
 
         lt_hr: lt_hr {
