@@ -29,7 +29,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <2 3>;
+            key-positions = <16 19>;
         };
 
         DevTools {
@@ -98,10 +98,10 @@
 
         default_layer {
             bindings = <
-&kp GRAVE   &kp Q  &kp W  &kp F         &kp P               &kp B      &kp J            &kp L                    &kp U      &kp Y    &kp SEMI   &kp MINUS
-&kp ESCAPE  &kp A  &kp R  &kp S         &lt_hr 2 T          &kp G      &kp M            &lt_hr 3 N               &kp E      &kp I    &kp O      &kp SQT
-&kp LGUI    &kp Z  &kp X  &kp C         &kp D               &kp V      &kp K            &kp H                    &kp COMMA  &kp DOT  &kp SLASH  &kp EQUAL
-                          &kp LEFT_ALT  &lt_qt 1 BACKSPACE  &kp LCTRL  &mt LS(RET) RET  &ht_qt LEFT_SHIFT SPACE  &none
+&mt LEFT_WIN GRAVE  &kp Q  &kp W  &kp F         &kp P               &kp B      &kp J            &kp L                    &kp U          &kp Y    &kp SEMI   &kp MINUS
+&kp ESCAPE          &kp A  &kp R  &kp S         &lt_hr 2 T          &kp G      &kp M            &lt_hr 3 N               &kp E          &kp I    &kp O      &kp SQT
+&none               &kp Z  &kp X  &kp C         &kp D               &kp V      &kp K            &kp H                    &kp COMMA      &kp DOT  &kp SLASH  &kp EQUAL
+                                  &kp LEFT_ALT  &lt_qt 1 BACKSPACE  &kp LCTRL  &mt LS(RET) RET  &ht_qt LEFT_SHIFT SPACE  &kp RIGHT_WIN
             >;
         };
 
